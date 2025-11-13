@@ -37,6 +37,8 @@ PODS:
     - RNScreens
   - ExpoKeepAwake (15.0.7):
     - ExpoModulesCore
+  - ExpoLinearGradient (15.0.7):
+    - ExpoModulesCore
   - ExpoLinking (8.0.8):
     - ExpoModulesCore
   - ExpoModulesCore (3.0.23):
@@ -1821,6 +1823,7 @@ DEPENDENCIES:
   - ExpoFont (from `../node_modules/expo-font/ios`)
   - ExpoHead (from `../node_modules/expo-router/ios`)
   - ExpoKeepAwake (from `../node_modules/expo/node_modules/expo-keep-awake/ios`)
+  - ExpoLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - ExpoLinking (from `../node_modules/expo-linking/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -1909,6 +1912,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-router/ios"
   ExpoKeepAwake:
     :path: "../node_modules/expo/node_modules/expo-keep-awake/ios"
+  ExpoLinearGradient:
+    :path: "../node_modules/expo-linear-gradient/ios"
   ExpoLinking:
     :path: "../node_modules/expo-linking/ios"
   ExpoModulesCore:
@@ -2061,6 +2066,7 @@ SPEC CHECKSUMS:
   ExpoFont: cf9d90ec1d3b97c4f513211905724c8171f82961
   ExpoHead: e317214fa14edeaf17748d39ec9e550a3d1194fb
   ExpoKeepAwake: 1a2e820692e933c94a565ec3fbbe38ac31658ffe
+  ExpoLinearGradient: a464898cb95153125e3b81894fd479bcb1c7dd27
   ExpoLinking: f051f28e50ea9269ff539317c166adec81d9342d
   ExpoModulesCore: 5f20603cf25698682d7c43c05fbba8c748b189d2
   FBLazyVector: e95a291ad2dadb88e42b06e0c5fb8262de53ec12
