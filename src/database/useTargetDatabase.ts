@@ -46,7 +46,7 @@ export function useTargetDatabase(){
         })
     }
 
-    function listedBySavedValue(){
+    function listedByCloseTarget(){
         return database.getAllAsync<TargetResponse>(`
             SELECT
                 targets.id,
@@ -61,7 +61,7 @@ export function useTargetDatabase(){
             FROM targets
             LEFT JOIN transactions ON targets.id = transactions.target_id
             GROUP BY targets.id, targets.name, targets.amount
-            ORDER BY current DESC
+            ORDER BY percentage DESC
             `)
     }
 
@@ -91,12 +91,16 @@ export function useTargetDatabase(){
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = $id`)
 
-            statement.executeAsync({
+            await statement.executeAsync({
                 $id: data.id,
                 $name: data.name,
-                amount: data.amount
+                $amount: data.amount,
             })
     }
 
-    return {create, listedBySavedValue, show, update}
+    async function remove(id: number) {
+        await database.runAsync("DELETE FROM targets WHERE id = ?", id)
+    }
+    
+    return {create, listedByCloseTarget, show, update, remove}
 }

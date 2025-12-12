@@ -1,3 +1,7 @@
 {
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": "active"
 }
